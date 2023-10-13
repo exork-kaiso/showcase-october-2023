@@ -2,8 +2,8 @@
 @use 'mixin';
 @use 'extend';
 
-header {
-}
+// header {
+// }
 
 .header {
 	&Container {
@@ -18,5 +18,25 @@ header {
 		font-weight: 700;
 		letter-spacing: 0.05em;
 		color: white;
+	}
+}
+
+// footer {
+// }
+
+.footer {
+	&Container {
+		width: 100%;
+		background-color: variables.$vivaMagenta;
+		padding: 10px 15px;
+
+		.copyright {
+			@extend %enGo;
+			font-size: 10px;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			text-align: center;
+			color: white;
+		}
 	}
 }

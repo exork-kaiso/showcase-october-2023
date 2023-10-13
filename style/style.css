@@ -3,6 +3,10 @@
   font-display: swap;
 }
 
+.footerContainer .copyright {
+  font-family: "Josefin Sans", sans-serif;
+}
+
 .headerContainer {
   width: 100%;
   padding: 31px 15px;
@@ -12,6 +16,19 @@
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 0.05em;
+  color: white;
+}
+
+.footerContainer {
+  width: 100%;
+  background-color: #bb2649;
+  padding: 10px 15px;
+}
+.footerContainer .copyright {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-align: center;
   color: white;
 }
 
