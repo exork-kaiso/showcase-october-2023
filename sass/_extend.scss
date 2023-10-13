@@ -1,2 +1,8 @@
 @use 'variables';
 @use 'mixin';
+
+// 和文角ゴシック
+%jaKakuGo {
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+	font-display: swap;
+}

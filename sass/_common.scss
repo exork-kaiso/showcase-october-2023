@@ -1,0 +1,22 @@
+@use 'variables';
+@use 'mixin';
+@use 'extend';
+
+header {
+}
+
+.header {
+	&Container {
+		width: 100%;
+		padding: 31px 15px;
+		background-color: variables.$vivaMagenta;
+	}
+
+	&Title {
+		@extend %jaKakuGo;
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: white;
+	}
+}

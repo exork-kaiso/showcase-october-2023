@@ -1,3 +1,18 @@
+.headerTitle {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-display: swap;
+}
 
+.headerContainer {
+  width: 100%;
+  padding: 31px 15px;
+  background-color: #bb2649;
+}
+.headerTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: white;
+}
 
 /*# sourceMappingURL=style.css.map */
