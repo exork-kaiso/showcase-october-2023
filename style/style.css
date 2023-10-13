@@ -1,4 +1,4 @@
-.headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .tabuwakeSubHead, .hyogumiLabel, .tabuwakeHead, .hyogumiHead {
+.headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .faqText, .tabuwakeSubHead, .hyogumiLabel, .faqLabel, .tabuwakeHead, .hyogumiHead, .faqHead {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-display: swap;
   color: #404040;
@@ -10,14 +10,33 @@
   color: #404040;
 }
 
-.tabuwakeHead, .hyogumiHead {
+.tabuwakeContainer, .hyogumiContainer, .faqContainer {
+  width: 100%;
+  max-width: 85.3333333333vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media screen and (min-width: 768px) {
+  .tabuwakeContainer, .hyogumiContainer, .faqContainer {
+    max-width: 83.3333333333vw;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .tabuwakeContainer, .hyogumiContainer, .faqContainer {
+    max-width: 70.2781844802vw;
+  }
+}
+
+.tabuwakeHead, .hyogumiHead, .faqHead {
   font-size: 32px;
   font-weight: 700;
   letter-spacing: 0.05em;
   margin-bottom: 30px;
 }
 
-.tabuwakeSubHead, .hyogumiLabel {
+.tabuwakeSubHead, .hyogumiLabel, .faqLabel {
   position: relative;
   font-size: 21px;
   font-weight: 700;
@@ -25,7 +44,7 @@
   padding-left: 18px;
   margin-bottom: 30px;
 }
-.tabuwakeSubHead::before, .hyogumiLabel::before {
+.tabuwakeSubHead::before, .hyogumiLabel::before, .faqLabel::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -36,7 +55,7 @@
   background-color: #bb2649;
 }
 
-.tabuwakeText, .hyogumiText {
+.tabuwakeText, .hyogumiText, .faqText {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 30px;
@@ -59,27 +78,14 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+.bgContainerEven {
   background-color: #eae7e8;
 }
+.bgContainerOdd {
+  background-color: #e0d9db;
+}
 
-.tabuwakeContainer {
-  width: 100%;
-  max-width: 85.3333333333vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-@media screen and (min-width: 768px) {
-  .tabuwakeContainer {
-    max-width: 83.3333333333vw;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .tabuwakeContainer {
-    max-width: 70.2781844802vw;
-  }
-}
 .tabuwakeLabel {
   width: 100%;
   margin-left: auto;
@@ -195,24 +201,6 @@
   height: 18px;
 }
 
-.hyogumiContainer {
-  width: 100%;
-  max-width: 85.3333333333vw;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 96px;
-  padding-bottom: 96px;
-}
-@media screen and (min-width: 768px) {
-  .hyogumiContainer {
-    max-width: 83.3333333333vw;
-  }
-}
-@media screen and (min-width: 1366px) {
-  .hyogumiContainer {
-    max-width: 70.2781844802vw;
-  }
-}
 .hyogumiTableList:last-of-type .hyogumiTableRow {
   border-bottom: solid 1px #d4cacd;
 }

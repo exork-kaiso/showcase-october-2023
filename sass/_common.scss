@@ -26,30 +26,21 @@
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
-		background-color: variables.$grayLilacOneThird;
+
+		&Even {
+			background-color: variables.$grayLilacOneThird;
+		}
+
+		&Odd {
+			background-color: variables.$grayLilacTwoThirds;
+		}
 	}
 }
 
+// タブ分けのセクション
 .tabuwake {
 	&Container {
-		width: 100%;
-		max-width: mixin.getVwNoRound(320, 375);
-		margin-left: auto;
-		margin-right: auto;
-
-		padding-top: 96px;
-		padding-bottom: 96px;
-
-		@include mixin.mq(md) {
-			max-width: mixin.getVwNoRound(640, 768);
-		}
-
-		@include mixin.mq(xl) {
-			max-width: mixin.getVwNoRound(960, 1366);
-		}
-
-		&.bg {
-		}
+		@extend %sectionContainer;
 	}
 
 	&Head {
@@ -195,23 +186,10 @@
 	}
 }
 
+// 表組みのセクション
 .hyogumi {
 	&Container {
-		width: 100%;
-		max-width: mixin.getVwNoRound(320, 375);
-		margin-left: auto;
-		margin-right: auto;
-
-		padding-top: 96px;
-		padding-bottom: 96px;
-
-		@include mixin.mq(md) {
-			max-width: mixin.getVwNoRound(640, 768);
-		}
-
-		@include mixin.mq(xl) {
-			max-width: mixin.getVwNoRound(960, 1366);
-		}
+		@extend %sectionContainer;
 	}
 
 	&Head {

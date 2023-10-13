@@ -15,6 +15,25 @@
 	color: variables.$black-1000;
 }
 
+// セクションのコンテナ
+%sectionContainer {
+	width: 100%;
+	max-width: mixin.getVwNoRound(320, 375);
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	@include mixin.mq(md) {
+		max-width: mixin.getVwNoRound(640, 768);
+	}
+
+	@include mixin.mq(xl) {
+		max-width: mixin.getVwNoRound(960, 1366);
+	}
+}
+
 // セクションの見出し
 %sectionHead {
 	@extend %jaKakuGo;
