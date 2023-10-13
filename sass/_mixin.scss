@@ -1,0 +1,29 @@
+// マップ型の変数でブレイクポイントを定義する
+$breakpoints: (
+	'xs': 'screen and (min-width: 320px)',
+	'sm': 'screen and (min-width: 576px)',
+	'md': 'screen and (min-width: 768px)',
+	'lg': 'screen and (min-width: 1024px)',
+	'xsl': 'screen and (min-width: 1200px)',
+	'xl': 'screen and (min-width: 1366px)',
+	'xxl': 'screen and (min-width: 1920px)',
+) !default;
+
+// メディアクエリ
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+// vwの算出（四捨五入）
+@function getVw($elemSize: 10, $windowWidth: 375) {
+	$vwValue: round(calc($elemSize * calc(100 / $windowWidth))) + vw;
+	@return $vwValue;
+}
+
+// vwの算出（四捨五入）
+@function getVwNoRound($elemSize: 10, $windowWidth: 375) {
+	$vwValue: calc($elemSize * calc(100 / $windowWidth)) + vw;
+	@return $vwValue;
+}
