@@ -1,10 +1,13 @@
-.headerTitle {
+.headerTitle, .hyogumiHead, .hyogumiLabel, .hyogumiText, .hyogumiTableRow .term, .hyogumiTableRow .definition {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-display: swap;
+  color: #404040;
 }
 
 .footerContainer .copyright {
   font-family: "Josefin Sans", sans-serif;
+  font-display: swap;
+  color: #404040;
 }
 
 .headerContainer {
@@ -17,6 +20,99 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   color: white;
+}
+
+.hyogumiContainer {
+  width: 100%;
+  max-width: 85.3333333333vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media screen and (min-width: 768px) {
+  .hyogumiContainer {
+    max-width: 83.3333333333vw;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .hyogumiContainer {
+    max-width: 70.2781844802vw;
+  }
+}
+.hyogumiHead {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+.hyogumiLabel {
+  position: relative;
+  font-size: 21px;
+  font-weight: 700;
+  display: flex;
+  padding-left: 18px;
+  margin-bottom: 30px;
+}
+.hyogumiLabel::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 24px;
+  background-color: #bb2649;
+}
+.hyogumiText {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 28px;
+}
+.hyogumiTableList:last-of-type .hyogumiTableRow {
+  border-bottom: solid 1px #d4cacd;
+}
+.hyogumiTableRow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .hyogumiTableRow {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-top: solid 1px #d4cacd;
+  }
+}
+.hyogumiTableRow .term {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 28px;
+  background-color: #d4cacd;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .hyogumiTableRow .term {
+    width: 25%;
+  }
+}
+.hyogumiTableRow .definition {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 100%;
+  border-left: solid 1px #d4cacd;
+  border-right: solid 1px #d4cacd;
+}
+@media screen and (min-width: 768px) {
+  .hyogumiTableRow .definition {
+    width: 75%;
+    border-left: none;
+  }
+}
+.hyogumiTableCell {
+  padding: 15px;
 }
 
 .footerContainer {

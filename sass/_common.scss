@@ -21,6 +21,117 @@
 	}
 }
 
+.hyogumi {
+	&Container {
+		width: 100%;
+		max-width: mixin.getVwNoRound(320, 375);
+		margin-left: auto;
+		margin-right: auto;
+
+		padding-top: 96px;
+		padding-bottom: 96px;
+
+		@include mixin.mq(md) {
+			max-width: mixin.getVwNoRound(640, 768);
+		}
+
+		@include mixin.mq(xl) {
+			max-width: mixin.getVwNoRound(960, 1366);
+		}
+	}
+
+	&Head {
+		@extend %jaKakuGo;
+		font-size: 32px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		margin-bottom: 30px;
+	}
+
+	&Label {
+		@extend %jaKakuGo;
+		position: relative;
+		font-size: 21px;
+		font-weight: 700;
+		display: flex;
+		padding-left: 18px;
+		margin-bottom: 30px;
+
+		&::before {
+			position: absolute;
+			content: '';
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 3px;
+			height: 24px;
+			background-color: variables.$vivaMagenta;
+		}
+	}
+
+	&Text {
+		@extend %jaKakuGo;
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 30px;
+		line-height: 28px;
+	}
+
+	&Table {
+		&List {
+			&:last-of-type {
+				.hyogumiTableRow {
+					border-bottom: solid 1px variables.$grayLilac;
+				}
+			}
+		}
+
+		&Row {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			@include mixin.mq(md) {
+				flex-direction: row;
+				flex-wrap: nowrap;
+				border-top: solid 1px variables.$grayLilac;
+			}
+
+			.term {
+				@extend %jaKakuGo;
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 28px;
+				background-color: variables.$grayLilac;
+				width: 100%;
+
+				@include mixin.mq(md) {
+					width: 25%;
+				}
+			}
+
+			.definition {
+				@extend %jaKakuGo;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 28px;
+				width: 100%;
+				border-left: solid 1px variables.$grayLilac;
+				border-right: solid 1px variables.$grayLilac;
+
+				@include mixin.mq(md) {
+					width: 75%;
+					border-left: none;
+				}
+			}
+		}
+
+		&Cell {
+			padding: 15px;
+		}
+	}
+}
+
 // footer {
 // }
 

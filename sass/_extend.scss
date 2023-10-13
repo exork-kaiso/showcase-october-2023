@@ -5,9 +5,12 @@
 %jaKakuGo {
 	font-family: 'Zen Kaku Gothic New', sans-serif;
 	font-display: swap;
+	color: variables.$black-1000;
 }
 
 // 欧文ゴシック
 %enGo {
 	font-family: 'Josefin Sans', sans-serif;
+	font-display: swap;
+	color: variables.$black-1000;
 }
