@@ -68,7 +68,11 @@
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
-		column-gap: 30px;
+		column-gap: 15px;
+
+		@include mixin.mq(md) {
+			column-gap: 30px;
+		}
 
 		&Item {
 			@extend %jaKakuGo;
@@ -76,9 +80,13 @@
 			background-color: variables.$grayLilac;
 			text-align: center;
 			font-weight: 700;
-			width: 100%;
+			width: calc(50% - 15px);
 			padding: 10px;
 			border-radius: 6px 6px 0 0;
+
+			@include mixin.mq(md) {
+				width: calc(50% - 30px);
+			}
 
 			&.active {
 				background-color: variables.$vivaMagenta;

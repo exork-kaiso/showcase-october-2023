@@ -88,15 +88,25 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  column-gap: 30px;
+  column-gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .tabuwakeLabel {
+    column-gap: 30px;
+  }
 }
 .tabuwakeLabelItem {
   background-color: #d4cacd;
   text-align: center;
   font-weight: 700;
-  width: 100%;
+  width: calc(50% - 15px);
   padding: 10px;
   border-radius: 6px 6px 0 0;
+}
+@media screen and (min-width: 768px) {
+  .tabuwakeLabelItem {
+    width: calc(50% - 30px);
+  }
 }
 .tabuwakeLabelItem.active {
   background-color: #bb2649;
