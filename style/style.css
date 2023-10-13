@@ -61,7 +61,7 @@
   left: 0;
   transform: translateY(-50%);
   width: 3px;
-  height: 24px;
+  height: 100%;
   background-color: #bb2649;
 }
 .hyogumiText {
