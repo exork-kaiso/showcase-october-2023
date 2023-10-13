@@ -1,4 +1,4 @@
-.headerTitle, .hyogumiHead, .hyogumiLabel, .hyogumiText, .hyogumiTableRow .term, .hyogumiTableRow .definition {
+.headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .tabuwakeSubHead, .hyogumiLabel, .tabuwakeHead, .hyogumiHead {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-display: swap;
   color: #404040;
@@ -8,6 +8,39 @@
   font-family: "Josefin Sans", sans-serif;
   font-display: swap;
   color: #404040;
+}
+
+.tabuwakeHead, .hyogumiHead {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 30px;
+}
+
+.tabuwakeSubHead, .hyogumiLabel {
+  position: relative;
+  font-size: 21px;
+  font-weight: 700;
+  display: flex;
+  padding-left: 18px;
+  margin-bottom: 30px;
+}
+.tabuwakeSubHead::before, .hyogumiLabel::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: #bb2649;
+}
+
+.tabuwakeText, .hyogumiText {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 28px;
 }
 
 .headerContainer {
@@ -20,6 +53,136 @@
   font-weight: 700;
   letter-spacing: 0.05em;
   color: white;
+}
+
+.bgContainer {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #eae7e8;
+}
+
+.tabuwakeContainer {
+  width: 100%;
+  max-width: 85.3333333333vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media screen and (min-width: 768px) {
+  .tabuwakeContainer {
+    max-width: 83.3333333333vw;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .tabuwakeContainer {
+    max-width: 70.2781844802vw;
+  }
+}
+.tabuwakeLabel {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 30px;
+}
+.tabuwakeLabelItem {
+  background-color: #d4cacd;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+}
+.tabuwakeLabelItem.active {
+  background-color: #bb2649;
+  color: white;
+}
+.tabuwakeContents {
+  display: none;
+}
+.tabuwakeContents.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 15px;
+  padding: 30px;
+  background-color: #bb2649;
+  border-radius: 0 0 6px 6px;
+}
+@media screen and (min-width: 1024px) {
+  .tabuwakeContents.active {
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 2.9296875vw;
+  }
+}
+.tabuwakeContentsOffset {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  justify-content: flex-start;
+}
+@media screen and (min-width: 1024px) {
+  .tabuwakeContentsOffset {
+    width: calc(50% - 1.46484375vw);
+  }
+}
+.tabuwakeContentsImage {
+  width: 100%;
+}
+.tabuwakeContentsTitle {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-heihgt: 42px;
+  color: white;
+}
+.tabuwakeContentsTag {
+  font-size: 10px;
+  font-weight: 700;
+  color: #bb2649;
+  background-color: white;
+  border-radius: 6px;
+  padding: 5px 15px;
+}
+.tabuwakeContentsTags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 5px;
+}
+.tabuwakeContentsDescription {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: white;
+}
+.tabuwakeContentsLink {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px;
+  background-color: white;
+  color: #bb2649;
+}
+.tabuwakeContentsLink::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background-image: url(../images/img_caret-right_vivamagenta.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: center center;
+  width: 18px;
+  height: 18px;
 }
 
 .hyogumiContainer {
@@ -39,36 +202,6 @@
   .hyogumiContainer {
     max-width: 70.2781844802vw;
   }
-}
-.hyogumiHead {
-  font-size: 32px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  margin-bottom: 30px;
-}
-.hyogumiLabel {
-  position: relative;
-  font-size: 21px;
-  font-weight: 700;
-  display: flex;
-  padding-left: 18px;
-  margin-bottom: 30px;
-}
-.hyogumiLabel::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 100%;
-  background-color: #bb2649;
-}
-.hyogumiText {
-  font-size: 16px;
-  font-weight: 400;
-  margin-bottom: 30px;
-  line-height: 28px;
 }
 .hyogumiTableList:last-of-type .hyogumiTableRow {
   border-bottom: solid 1px #d4cacd;
