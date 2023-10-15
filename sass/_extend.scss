@@ -1,2 +1,75 @@
 @use 'variables';
 @use 'mixin';
+
+// 和文角ゴシック
+%jaKakuGo {
+	font-family: 'Zen Kaku Gothic New', sans-serif;
+	font-display: swap;
+	color: variables.$black-1000;
+}
+
+// 欧文ゴシック
+%enGo {
+	font-family: 'Josefin Sans', sans-serif;
+	font-display: swap;
+	color: variables.$black-1000;
+}
+
+// セクションのコンテナ
+%sectionContainer {
+	width: 100%;
+	max-width: mixin.getVwNoRound(320, 375);
+	margin-left: auto;
+	margin-right: auto;
+
+	padding-top: 96px;
+	padding-bottom: 96px;
+
+	@include mixin.mq(md) {
+		max-width: mixin.getVwNoRound(640, 768);
+	}
+
+	@include mixin.mq(xl) {
+		max-width: mixin.getVwNoRound(960, 1366);
+	}
+}
+
+// セクションの見出し
+%sectionHead {
+	@extend %jaKakuGo;
+	font-size: 32px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	margin-bottom: 30px;
+}
+
+// セクションのラベル・小見出し
+%sectionLabel {
+	@extend %jaKakuGo;
+	position: relative;
+	font-size: 21px;
+	font-weight: 700;
+	display: flex;
+	padding-left: 18px;
+	margin-bottom: 30px;
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 3px;
+		height: 100%;
+		background-color: variables.$vivaMagenta;
+	}
+}
+
+// セクションの本文
+%sectionText {
+	@extend %jaKakuGo;
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 30px;
+	line-height: 28px;
+}

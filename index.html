@@ -19,9 +19,201 @@
 		<!-- <meta name="twitter:image" content="/images/common/ogp-image.png" /> -->
 
 		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="icon" href="./images/favicon.png" id="favicon" />
+		<link
+			rel="apple-touch-icon"
+			sizes="256x256"
+			href="./images/favicon.png"
+		/>
+
 		<link rel="stylesheet" href="style/style.css" />
 	</head>
 	<body>
+		<header id="header">
+			<div class="headerContainer">
+				<h1 class="headerTitle">
+					<a href="">ポートフォリオサイト</a>
+				</h1>
+			</div>
+		</header>
+
+		<section class="bgContainerOdd">
+			<div class="tabuwakeContainer">
+				<h3 class="tabuwakeHead">タブ分けのセクション</h3>
+
+				<p class="tabuwakeSubHead">タブ分けのセクションの小見出し</p>
+
+				<p class="tabuwakeText">
+					タブ分けのセクションには【見出し】と【小見出し】と【説明文】と【タブのラベル】【タブのコンテンツ】を用意しました。
+				</p>
+
+				<ul class="tabuwakeLabel">
+					<li id="tabuwakeLabelA" class="tabuwakeLabelItem active">
+						<button>タブ A</button>
+					</li>
+					<li id="tabuwakeLabelB" class="tabuwakeLabelItem">
+						<button>タブ B</button>
+					</li>
+				</ul>
+				<ul id="tabuwakeContentsA" class="tabuwakeContents active">
+					<li class="tabuwakeContentsOffset">
+						<picture>
+							<img
+								class="tabuwakeContentsImage"
+								src="./images/img_tabuwake-image-A.png"
+								alt="タブAの画像"
+							/>
+						</picture>
+					</li>
+					<li class="tabuwakeContentsOffset">
+						<h3 class="tabuwakeContentsTitle">
+							タブAのタイトルタブAのタイトルタブAのタイトル
+						</h3>
+
+						<ul class="tabuwakeContentsTags">
+							<li class="tabuwakeContentsTag">タグ A-A</li>
+							<li class="tabuwakeContentsTag">タグ A-B</li>
+							<li class="tabuwakeContentsTag">タグ A-C</li>
+						</ul>
+
+						<p class="tabuwakeContentsDescription">
+							タブAの内容を説明するテキストです。タブAの内容を説明するテキストです。タブAの内容を説明するテキストです。タブAの内容を説明するテキストです。タブAの内容を説明するテキストです。
+						</p>
+
+						<a href="" class="tabuwakeContentsLink"
+							>タブAを詳しく見る</a
+						>
+					</li>
+				</ul>
+				<ul id="tabuwakeContentsB" class="tabuwakeContents">
+					<li class="tabuwakeContentsOffset">
+						<picture>
+							<img
+								class="tabuwakeContentsImage"
+								src="./images/img_tabuwake-image-B.png"
+								alt="タブBの画像"
+							/>
+						</picture>
+					</li>
+					<li class="tabuwakeContentsOffset">
+						<h3 class="tabuwakeContentsTitle">
+							タブBのタイトルタブBのタイトルタブBのタイトル
+						</h3>
+
+						<ul class="tabuwakeContentsTags">
+							<li class="tabuwakeContentsTag">タグ B-A</li>
+							<li class="tabuwakeContentsTag">タグ B-B</li>
+							<li class="tabuwakeContentsTag">タグ B-C</li>
+						</ul>
+
+						<p class="tabuwakeContentsDescription">
+							タブBの内容を説明するテキストです。タブBの内容を説明するテキストです。タブBの内容を説明するテキストです。タブBの内容を説明するテキストです。タブBの内容を説明するテキストです。
+						</p>
+
+						<a href="" class="tabuwakeContentsLink"
+							>タブBを詳しく見る</a
+						>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="bgContainerEven">
+			<div class="hyogumiContainer">
+				<h3 class="hyogumiHead">表組みのセクション</h3>
+
+				<p class="hyogumiLabel">表組みのセクションのラベル</p>
+
+				<p class="hyogumiText">
+					表組みのセクションには【見出し】と【ラベル】と【説明文】と【テーブル】を用意しました。
+				</p>
+
+				<ul class="hyogumiTable">
+					<li class="hyogumiTableList">
+						<dl class="hyogumiTableRow">
+							<dt class="hyogumiTableCell term">用語 1</dt>
+							<dd class="hyogumiTableCell definition">定義 1</dd>
+						</dl>
+					</li>
+					<li class="hyogumiTableList">
+						<dl class="hyogumiTableRow">
+							<dt class="hyogumiTableCell term">用語 2</dt>
+							<dd class="hyogumiTableCell definition">定義 2</dd>
+						</dl>
+					</li>
+					<li class="hyogumiTableList">
+						<dl class="hyogumiTableRow">
+							<dt class="hyogumiTableCell term">用語 3</dt>
+							<dd class="hyogumiTableCell definition">定義 3</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="bgContainerOdd">
+			<div class="faqContainer">
+				<h3 class="faqHead">よくある質問のセクション</h3>
+
+				<p class="faqLabel">よくある質問のセクションのラベル</p>
+
+				<p class="faqText">
+					よくある質問のセクションには【見出し】と【ラベル】と【説明文】と【アコーディオンUI】を用意しました。
+				</p>
+
+				<ul class="faqList">
+					<li class="faqItem">
+						<details class="js-details">
+							<summary class="js-summary">
+								<span class="summary_inner">
+									よくある質問の問い 1<span
+										class="icon"
+									></span>
+								</span>
+							</summary>
+							<div class="content js-content">
+								<div class="content_inner">
+									折りたたまれたよくある質問の答え1です。折りたたまれたよくある質問の答え1です。折りたたまれたよくある質問の答え1です。
+								</div>
+							</div>
+						</details>
+					</li>
+					<li class="faqItem">
+						<details class="js-details">
+							<summary class="js-summary">
+								<span class="summary_inner">
+									よくある質問の問い 2<span
+										class="icon"
+									></span>
+								</span>
+							</summary>
+							<div class="content js-content">
+								<div class="content_inner">
+									折りたたまれたよくある質問の答え2です。折りたたまれたよくある質問の答え2です。折りたたまれたよくある質問の答え2です。折りたたまれたよくある質問の答え2です。折りたたまれたよくある質問の答え2です。
+								</div>
+							</div>
+						</details>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footerContainer">
+				<p class="copyright">&copy; 2023 exork-kaiso@GitHub</p>
+			</div>
+		</footer>
 		<script src="js/script.js"></script>
 	</body>
 </html>

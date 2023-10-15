@@ -1,0 +1,305 @@
+@use 'variables';
+@use 'mixin';
+@use 'extend';
+
+// header {
+// }
+
+.header {
+	&Container {
+		width: 100%;
+		padding: 31px 15px;
+		background-color: variables.$vivaMagenta;
+	}
+
+	&Title {
+		@extend %jaKakuGo;
+		font-size: 24px;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: white;
+	}
+}
+
+.bg {
+	&Container {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+		&Even {
+			background-color: variables.$grayLilacOneThird;
+		}
+
+		&Odd {
+			background-color: variables.$grayLilacTwoThirds;
+		}
+	}
+}
+
+// タブ分けのセクション
+.tabuwake {
+	&Container {
+		@extend %sectionContainer;
+	}
+
+	&Head {
+		@extend %sectionHead;
+	}
+
+	&SubHead {
+		@extend %sectionLabel;
+	}
+
+	&Label {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		column-gap: 15px;
+
+		@include mixin.mq(md) {
+			column-gap: 30px;
+		}
+
+		&Item {
+			@extend %jaKakuGo;
+
+			background-color: variables.$grayLilac;
+			text-align: center;
+			font-weight: 700;
+			width: calc(50% - 15px);
+			padding: 10px;
+			border-radius: 6px 6px 0 0;
+
+			@include mixin.mq(md) {
+				width: calc(50% - 30px);
+			}
+
+			&.active {
+				background-color: variables.$vivaMagenta;
+				color: white;
+			}
+		}
+	}
+
+	&Text {
+		@extend %sectionText;
+	}
+
+	&Contents {
+		display: none;
+
+		&.active {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			row-gap: 15px;
+			padding: 30px;
+			background-color: variables.$vivaMagenta;
+			border-radius: 0 0 6px 6px;
+
+			@include mixin.mq(lg) {
+				flex-direction: row;
+				justify-content: space-between;
+				column-gap: mixin.getVwNoRound(30, 1024);
+			}
+		}
+
+		&Offset {
+			display: flex;
+			flex-direction: column;
+			row-gap: 15px;
+			justify-content: flex-start;
+
+			@include mixin.mq(lg) {
+				width: calc(50% - mixin.getVwNoRound(15, 1024));
+			}
+		}
+
+		&Image {
+			width: 100%;
+		}
+
+		&Title {
+			@extend %jaKakuGo;
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 0.05em;
+			line-heihgt: 42px;
+			color: white;
+		}
+
+		&Tag {
+			&s {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				column-gap: 15px;
+				row-gap: 5px;
+			}
+
+			@extend %jaKakuGo;
+			font-size: 10px;
+			font-weight: 700;
+			color: variables.$vivaMagenta;
+
+			background-color: white;
+			border-radius: 6px;
+			padding: 5px 15px;
+		}
+
+		&Description {
+			@extend %jaKakuGo;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 28px;
+			color: white;
+		}
+
+		&Link {
+			@extend %jaKakuGo;
+			position: relative;
+			font-size: 16px;
+			font-weight: 600;
+			padding: 15px;
+			background-color: white;
+			color: variables.$vivaMagenta;
+
+			&::before {
+				position: absolute;
+				content: '';
+				top: 50%;
+				right: 15px;
+				transform: translateY(-50%);
+				background-image: url(../images/img_caret-right_vivamagenta.svg);
+				background-repeat: no-repeat;
+				background-size: 18px 18px;
+				background-position: center center;
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+}
+
+// 表組みのセクション
+.hyogumi {
+	&Container {
+		@extend %sectionContainer;
+	}
+
+	&Head {
+		@extend %sectionHead;
+	}
+
+	&Label {
+		@extend %sectionLabel;
+	}
+
+	&Text {
+		@extend %sectionText;
+	}
+
+	&Table {
+		&List {
+			&:last-of-type {
+				.hyogumiTableRow {
+					border-bottom: solid 1px variables.$grayLilac;
+				}
+			}
+		}
+
+		&Row {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+
+			@include mixin.mq(md) {
+				flex-direction: row;
+				flex-wrap: nowrap;
+				border-top: solid 1px variables.$grayLilac;
+			}
+
+			.term {
+				@extend %jaKakuGo;
+				font-size: 16px;
+				font-weight: 700;
+				line-height: 28px;
+				background-color: variables.$grayLilac;
+				width: 100%;
+
+				@include mixin.mq(md) {
+					width: 25%;
+				}
+			}
+
+			.definition {
+				@extend %jaKakuGo;
+				font-size: 16px;
+				font-weight: 400;
+				line-height: 28px;
+				width: 100%;
+				border-left: solid 1px variables.$grayLilac;
+				border-right: solid 1px variables.$grayLilac;
+
+				@include mixin.mq(md) {
+					width: 75%;
+					border-left: none;
+				}
+			}
+		}
+
+		&Cell {
+			padding: 15px;
+		}
+	}
+}
+
+.faq {
+	&Container {
+		@extend %sectionContainer;
+	}
+
+	&Head {
+		@extend %sectionHead;
+	}
+
+	&Label {
+		@extend %sectionLabel;
+	}
+
+	&Text {
+		@extend %sectionText;
+	}
+
+	&List {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		row-gap: 30px;
+	}
+}
+
+// footer {
+// }
+
+.footer {
+	&Container {
+		width: 100%;
+		background-color: variables.$vivaMagenta;
+		padding: 10px 15px;
+
+		.copyright {
+			@extend %enGo;
+			font-size: 10px;
+			font-weight: 400;
+			letter-spacing: 0.1em;
+			text-align: center;
+			color: white;
+		}
+	}
+}
