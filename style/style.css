@@ -1,10 +1,10 @@
-.summary_inner, .content_inner, .headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .faqText, .tabuwakeSubHead, .hyogumiLabel, .faqLabel, .tabuwakeHead, .hyogumiHead, .faqHead {
+.summary_inner, .content_inner, .headerTitle, .firstviewHeadContent .ja, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .faqText, .tabuwakeSubHead, .hyogumiLabel, .faqLabel, .tabuwakeHead, .hyogumiHead, .faqHead {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-display: swap;
   color: #404040;
 }
 
-.footerContainer .copyright {
+.firstviewHeadContent .en, .footerContainer .copyright {
   font-family: "Josefin Sans", sans-serif;
   font-display: swap;
   color: #404040;
@@ -62,6 +62,14 @@
   line-height: 28px;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
 .headerContainer {
   width: 100%;
   padding: 31px 15px;
@@ -84,6 +92,63 @@
 }
 .bgContainerOdd {
   background-color: #e0d9db;
+}
+
+.firstviewContainer {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.firstviewHeadContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 45px));
+}
+.firstviewHeadContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 15px;
+}
+.firstviewHeadContent .en {
+  font-size: 8vw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 8.8vw;
+  color: #bb2649;
+}
+@media screen and (min-width: 768px) {
+  .firstviewHeadContent .en {
+    font-size: 4.1666666667vw;
+    line-height: 4.5833333333vw;
+  }
+}
+.firstviewHeadContent .ja {
+  font-size: 4.8vw;
+  font-weight: 700;
+  line-height: 6vw;
+  color: white;
+}
+@media screen and (min-width: 768px) {
+  .firstviewHeadContent .ja {
+    font-size: 1.25vw;
+    line-height: 1.5625vw;
+  }
+}
+.firstviewHeadContent .md-none {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .firstviewHeadContent .md-none {
+    display: none;
+  }
+}
+.firstviewImage {
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.15);
 }
 
 .tabuwakeLabel {

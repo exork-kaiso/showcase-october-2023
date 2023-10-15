@@ -2,8 +2,13 @@
 @use 'mixin';
 @use 'extend';
 
-// header {
-// }
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
 
 .header {
 	&Container {
@@ -34,6 +39,79 @@
 		&Odd {
 			background-color: variables.$grayLilacTwoThirds;
 		}
+	}
+}
+
+// ファーストビューのセクション
+.firstview {
+	&Container {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	&Head {
+		&Container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, calc(-50% + 45px));
+		}
+
+		&Content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 15px;
+
+			.en {
+				@extend %enGo;
+				font-size: mixin.getVwNoRound(calc(360 / 12), 375);
+				font-weight: 700;
+				letter-spacing: 0.1em;
+				line-height: mixin.getVwNoRound(calc((360 / 12) * 1.1), 375);
+				color: variables.$vivaMagenta;
+
+				@include mixin.mq(md) {
+					font-size: mixin.getVwNoRound(calc(960 / 12), 1920);
+					line-height: mixin.getVwNoRound(
+						calc((960 / 12) * 1.1),
+						1920
+					);
+				}
+			}
+
+			.ja {
+				@extend %jaKakuGo;
+				font-size: mixin.getVwNoRound(calc(360 / 20), 375);
+				font-weight: 700;
+				line-height: mixin.getVwNoRound(calc((360 / 20) * 1.25), 375);
+				color: white;
+
+				@include mixin.mq(md) {
+					font-size: mixin.getVwNoRound(calc(480 / 20), 1920);
+					line-height: mixin.getVwNoRound(
+						calc((480 / 20) * 1.25),
+						1920
+					);
+				}
+			}
+
+			.md-none {
+				display: block;
+
+				@include mixin.mq(md) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&Image {
+		width: 100%;
+		height: 100%;
+		filter: brightness(0.15);
 	}
 }
 
