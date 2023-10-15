@@ -1,4 +1,4 @@
-.headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .faqText, .tabuwakeSubHead, .hyogumiLabel, .faqLabel, .tabuwakeHead, .hyogumiHead, .faqHead {
+.summary_inner, .content_inner, .headerTitle, .tabuwakeLabelItem, .tabuwakeContentsTitle, .tabuwakeContentsTag, .tabuwakeContentsDescription, .tabuwakeContentsLink, .hyogumiTableRow .term, .hyogumiTableRow .definition, .tabuwakeText, .hyogumiText, .faqText, .tabuwakeSubHead, .hyogumiLabel, .faqLabel, .tabuwakeHead, .hyogumiHead, .faqHead {
   font-family: "Zen Kaku Gothic New", sans-serif;
   font-display: swap;
   color: #404040;
@@ -246,6 +246,13 @@
   padding: 15px;
 }
 
+.faqList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 30px;
+}
+
 .footerContainer {
   width: 100%;
   background-color: #bb2649;
@@ -257,6 +264,72 @@
   letter-spacing: 0.1em;
   text-align: center;
   color: white;
+}
+
+summary {
+  display: block;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.summary_inner {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border: 1px solid #e2b1bc;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  color: #bb2649;
+}
+
+.icon {
+  display: block;
+  position: relative;
+  width: 24px;
+  margin-left: 6px;
+  flex-shrink: 0;
+  transform-origin: center 43%;
+  transition: transform 0.4s;
+}
+.icon::before, .icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 3px;
+  background-color: #bb2649;
+}
+.icon::before {
+  left: 0;
+  transform: rotate(45deg);
+}
+.icon::after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+
+details.is-opened .icon {
+  transform: rotate(180deg);
+}
+
+.content {
+  overflow: hidden;
+  background-color: white;
+}
+.content_inner {
+  padding: 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #bb2649;
 }
 
 /*# sourceMappingURL=style.css.map */

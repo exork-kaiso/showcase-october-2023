@@ -259,6 +259,31 @@
 	}
 }
 
+.faq {
+	&Container {
+		@extend %sectionContainer;
+	}
+
+	&Head {
+		@extend %sectionHead;
+	}
+
+	&Label {
+		@extend %sectionLabel;
+	}
+
+	&Text {
+		@extend %sectionText;
+	}
+
+	&List {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		row-gap: 30px;
+	}
+}
+
 // footer {
 // }
 
