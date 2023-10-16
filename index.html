@@ -47,6 +47,25 @@
 				<h1 class="headerTitle">
 					<a href="">ポートフォリオサイト</a>
 				</h1>
+				<ul class="headerList">
+					<li class="headerLink">
+						<a href="#oshirase">お知らせ</a>
+					</li>
+					<li class="headerLink">
+						<a href="#tabuwake">タブ分け</a>
+					</li>
+					<li class="headerLink">
+						<a href="#hyogumi">表組み</a>
+					</li>
+					<li class="headerLink">
+						<a href="#faq">よくある質問</a>
+					</li>
+				</ul>
+				<button class="js-dialog-open headerMenuButton">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</button>
 			</div>
 		</header>
 
@@ -76,7 +95,7 @@
 			</div>
 		</section>
 
-		<section class="bgContainerEven">
+		<section id="oshirase" class="bgContainerEven">
 			<div class="oshiraseContainer">
 				<h3 class="oshiraseHead">お知らせのセクション</h3>
 				<ul class="oshiraseList">
@@ -90,7 +109,7 @@
 			</div>
 		</section>
 
-		<section class="bgContainerOdd">
+		<section id="tabuwake" class="bgContainerOdd">
 			<div class="tabuwakeContainer">
 				<h3 class="tabuwakeHead">タブ分けのセクション</h3>
 
@@ -171,7 +190,7 @@
 			</div>
 		</section>
 
-		<section class="bgContainerEven">
+		<section id="hyogumi" class="bgContainerEven">
 			<div class="hyogumiContainer">
 				<h3 class="hyogumiHead">表組みのセクション</h3>
 
@@ -204,7 +223,7 @@
 			</div>
 		</section>
 
-		<section class="bgContainerOdd">
+		<section id="faq" class="bgContainerOdd">
 			<div class="faqContainer">
 				<h3 class="faqHead">よくある質問のセクション</h3>
 
@@ -256,6 +275,26 @@
 				<p class="copyright">&copy; 2023 exork-kaiso@GitHub</p>
 			</div>
 		</footer>
+
+		<dialog class="dialog js-dialog is-can-scroll">
+			<div class="dialogContent">
+				<ul class="dialogList">
+					<li class="dialogItem">
+						<a class="js-dialogLink" href="#oshirase">お知らせ</a>
+					</li>
+					<li class="dialogItem">
+						<a class="js-dialogLink" href="#tabuwake">タブ分け</a>
+					</li>
+					<li class="dialogItem">
+						<a class="js-dialogLink" href="#hyogumi">表組み</a>
+					</li>
+					<li class="dialogItem">
+						<a class="js-dialogLink" href="#faq">よくある質問</a>
+					</li>
+				</ul>
+				<button class="js-dialog-close dialogButton">閉じる</button>
+			</div>
+		</dialog>
 
 		<script src="js/script.js"></script>
 	</body>

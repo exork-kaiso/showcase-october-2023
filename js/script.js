@@ -1,6 +1,32 @@
 'use strict';
 
 {
+	// ハンバーガーメニュー
+	const dialogElement = document.querySelector('.js-dialog');
+	const dialogOpenButton = document.querySelector('.js-dialog-open');
+	const dialogCloseButton = document.querySelector('.js-dialog-close');
+	const dialogLinks = document.querySelectorAll('.js-dialogLink');
+
+	dialogLinks.forEach(dialogLink => {
+		dialogLink.addEventListener('click', () => {
+			dialogElement.close();
+			document.body.classList.remove('is-hideScrollbar');
+		});
+	});
+
+	dialogOpenButton.addEventListener('click', () => {
+		if (typeof dialogElement.showModal === 'function') {
+			dialogElement.showModal();
+		} else {
+			alert('dialog要素をサポートしていないブラウザです。');
+		}
+	});
+
+	dialogCloseButton.addEventListener('click', () => {
+		dialogElement.close();
+		document.body.classList.remove('is-hideScrollbar');
+	});
+
 	// タブの処理
 	const tabuwakeLabelA = document.querySelector('#tabuwakeLabelA');
 	const tabuwakeLabelB = document.querySelector('#tabuwakeLabelB');
