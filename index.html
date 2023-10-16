@@ -25,6 +25,10 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -71,17 +75,61 @@
 
 		<section class="bgContainerFirst">
 			<div class="firstviewContainer">
-				<picture>
-					<source
-						media="(min-width:768px)"
-						srcset="./images/img_full-screen-image-01_PC.png"
-					/>
-					<img
-						src="./images/img_full-screen-image-01_SP.png"
-						alt=""
-						class="firstviewImage"
-					/>
-				</picture>
+				<div class="firstviewContent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide firstviewContentSlide">
+							<picture>
+								<source
+									media="(min-width:768px)"
+									srcset="
+										./images/img_full-screen-image-01_PC.png
+									"
+								/>
+								<img
+									src="./images/img_full-screen-image-01_SP.png"
+									alt=""
+									class="firstviewImage"
+								/>
+							</picture>
+						</div>
+						<div class="swiper-slide firstviewContentSlide">
+							<picture>
+								<source
+									media="(min-width:768px)"
+									srcset="
+										./images/img_full-screen-image-02_PC.png
+									"
+								/>
+								<img
+									src="./images/img_full-screen-image-02_SP.png"
+									alt=""
+									class="firstviewImage"
+								/>
+							</picture>
+						</div>
+						<div class="swiper-slide firstviewContentSlide">
+							<picture>
+								<source
+									media="(min-width:768px)"
+									srcset="
+										./images/img_full-screen-image-03_PC.png
+									"
+								/>
+								<img
+									src="./images/img_full-screen-image-03_SP.png"
+									alt=""
+									class="firstviewImage"
+								/>
+							</picture>
+						</div>
+					</div>
+					<div class="autoplay-progress">
+						<svg viewBox="0 0 48 48">
+							<circle cx="24" cy="24" r="20"></circle>
+						</svg>
+						<span></span>
+					</div>
+				</div>
 				<div class="firstviewHeadContainer">
 					<h2 class="firstviewHeadContent">
 						<span class="en"> Portfolio:<br />October 2023</span>
@@ -99,6 +147,12 @@
 			<div class="oshiraseContainer">
 				<h3 class="oshiraseHead">お知らせのセクション</h3>
 				<ul class="oshiraseList">
+					<dl class="oshiraseItem">
+						<dt class="oshiraseTerm">2023.10.16</dt>
+						<dd class="oshiraseDescription">
+							ファーストビューにカルーセル（フェード）を追加しました。
+						</dd>
+					</dl>
 					<dl class="oshiraseItem">
 						<dt class="oshiraseTerm">2023.10.16</dt>
 						<dd class="oshiraseDescription">
@@ -302,6 +356,7 @@
 			</div>
 		</dialog>
 
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
