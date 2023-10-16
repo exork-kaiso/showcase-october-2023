@@ -115,6 +115,48 @@ header {
 	}
 }
 
+// お知らせのセクション
+.oshirase {
+	&Container {
+		@extend %sectionContainer;
+	}
+
+	&Head {
+		@extend %sectionHead;
+	}
+
+	&List {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		row-gap: 15px;
+	}
+
+	&Item {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		column-gap: 15px;
+	}
+
+	&Term {
+		@extend %enGo;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 28px;
+		color: variables.$black-1000;
+		padding-top: 2px;
+	}
+
+	&Description {
+		@extend %jaKakuGo;
+		font-size: 16px;
+		font-weight: 600;
+		line-height: 28px;
+		color: variables.$vivaMagenta;
+	}
+}
+
 // タブ分けのセクション
 .tabuwake {
 	&Container {
