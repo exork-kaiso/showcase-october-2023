@@ -1,4 +1,4 @@
-# portfolio-october-2023
+# showcase-october-2023
 
 ## SASS
 
